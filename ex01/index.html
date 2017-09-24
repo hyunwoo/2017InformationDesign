@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<script src="//d3plus.org/js/d3.js"></script>
+		<script src="//d3plus.org/js/d3plus.js"></script>
+	</head>
+	<body>
+		<div id="viz"></div>
+	</body>
+
+	
+	<script>
+	  var sample_data = [
+	    {"name": "alpha", "skill": "power", "value": 4},
+	    {"name": "alpha", "skill": "courage", "value": 8},
+	    {"name": "alpha", "skill": "wisdom", "value": 2},
+	    {"name": "beta", "skill": "power", "value": 5},
+	    {"name": "beta", "skill": "courage", "value": 4},
+	    {"name": "beta", "skill": "wisdom", "value": 6}
+	  ];
+	  var visualization = d3plus.viz()
+	    .container("#viz")
+	    .data(sample_data)
+	    .id(["name", "skill"])
+	    .size("value")
+	    .type("radar")
+	    .draw();
+	</script>
+</html>
